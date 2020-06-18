@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@media screen and (max-width: 991px) {
+     /* start of large tablet styles */
+     .img-responsive {
+       max-width: 70%;
+       max-height: auto;
+     }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 767px) {
+     /* start of medium tablet styles */
+     /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+     .img-responsive {
+       max-width: 100%;
+       max-height: auto;
+     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 479px) {
+     /* start of phone styles */
+     /* It's possible to hide the image if the screen becomes too small */
+     .img-responsive {
+       max-width: 100%;
+       max-height: auto;
+     }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+a {
+  color: #000;
+  transition: color 0.25s ease;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: #ff4136;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li { margin-bottom: 15px; }
+
+
+.register {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar {
+  clear: left;
+}
+
+.nav-bar:hover {
+  text-decoration:none
+}
+
+.nav-inner {
+  list-style:none;
+}
+
+.header {
+  float: left; 
+  top:0;
+  bottom:0;
+  width:240px;
+  height:auto;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px
+}
+
+.header-inner {
+  overflow-x:visible;
+  padding-left:15px;
+  padding-top:15px;
+  padding-bottom:15px;
+  padding-right:15px;
+  border-top:1px
+}
+
+.header-brand {
+  transition: color 0.25s ease;
+  color:#000;
+  font-family:Cabin,Helvetica,Arial,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  text-decoration:none;
+  display:block;
+  padding-top:10px;
+
+}
+
+.header-brand:hover {
+  text-decoration:none;
+  color: #ff4136;
+
+}
+
+.footer {
+     position: fixed;
+     bottom: 0px;
+     left: 20px;
+     width:240px;
+}
+
+.icon {
+  padding-right: 15px
 }

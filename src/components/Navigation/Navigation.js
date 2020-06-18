@@ -3,7 +3,7 @@ import './Navigation.css';
 
 const Navigation = () => {
 	return (
-		<nav className="nav-bar header">
+		<nav className="nav-bar container-pad">
 			<div className="">
 		      <ul className="nav-inner header-inner">
 		        <li><a href="www.vegoodies.co.uk" title="">Home</a></li>

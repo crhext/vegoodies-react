@@ -8,12 +8,12 @@ const Header = () => {
 		<nav className="header container-pad">
 			<Tilt className="Tilt" options={{ max : 25 }}>
 				<div className="Tilt-inner header-inner br2 shadow-2">			
-			          <a href="/" title="">
+			          <p  title="">
 			            <img className="img-responsive logo" alt="" src={logo}></img>
 			            	<div className="header-brand">
 			            	Vegoodies
 			            	</div>
-			          </a>
+			          </p>
 			        <p className="italic">Plant based recipes for every occasion; by Chris & Narnz.</p>
 				</div> 
 			</Tilt>

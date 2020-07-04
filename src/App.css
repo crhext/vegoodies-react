@@ -33,6 +33,17 @@
 
 ul li { margin-bottom: 15px; }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family:Cabin,Helvetica,Arial,sans-serif;
+  font-weight:700;
+  line-height:1.1;
+
+}
+
+.black-text {
+  color: #000
+}
+
 body {
   font-family:Source Sans Pro,Helvetica,Arial,sans-serif;
   font-size:14px;
@@ -104,7 +115,8 @@ body {
 }
 
 .header-inner:hover {
-  text-decoration:none
+  text-decoration:none;
+  cursor: pointer;
 }
 
 .header-brand {
@@ -165,7 +177,7 @@ body {
 }
 
 .main {
-  margin-left: 240px; /* Same as the width of the sidebar */
+  margin-left: 260px; /* Same as the width of the sidebar */
   width: auto;
 }
 
@@ -188,7 +200,7 @@ body {
 }
 
 .form-control:focus{
-  border-color: #ff4136;  
+  border-color: black;  
   -webkit-box-shadow: none;
 }
 
@@ -202,8 +214,54 @@ body {
   cursor: pointer;
 }
 
-.nav-home {
+.nav-active {
   font-weight: bold;
   font-size: 1.2em
 }
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+.add-container {
+  padding-left: 10px;
+  width: 100%;
+}
+
+.main-header {
+  font-size: 4em;
+
+}
+
+.pad-below {
+  padding-bottom: 30px;
+}
+
+.btn-color {
+  background-color: #ff6360;
+  border-color: #ff6360;
+}
+
+.btn-color:hover {
+  background-color: #ff4136;
+  border-color: #ff6360;
+}
+
+.link-hover:hover {
+  cursor: pointer;
+  color: #ff6360;
+}
+
+.link-hover:hover .link-hover-child{
+  color: black;
+}
+
+.white-space {
+  white-space: pre-wrap;
+}
+
+.page-header {
+  font-size: 4em;
+}
+
 

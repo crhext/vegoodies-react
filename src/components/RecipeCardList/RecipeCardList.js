@@ -7,7 +7,9 @@ const masonryOptions = {
 };
 
 
-const RecipeCardList = ({ recipes }) => {	
+class RecipeCardList extends React.Component {
+
+	render() {	
 	return (
 		<div className="recipes">
             <Masonry
@@ -16,18 +18,22 @@ const RecipeCardList = ({ recipes }) => {
                 options={masonryOptions} // default {}
                 
                >			
-				{recipes.map((recipe, i) => {
+				{this.props.recipes.map((recipe, i) => {
 					return (
 						<RecipeCard key={i.toString()}
-							image={recipes[i].image}
-							title={recipes[i].title}
-							overview ={recipes[i].overview}
+							image={this.props.recipes[i].image}
+							title={this.props.recipes[i].title}
+							overview ={this.props.recipes[i].overview}
+							name ={this.props.recipes[i].name}
+							onRouteChange={this.props.onRouteChange}
+							onRecipeSelect={this.props.onRecipeSelect}
 						/>
 					);
 				})}
 			</Masonry>
 		</div>
 	);
+};
 };
 
 export default RecipeCardList;

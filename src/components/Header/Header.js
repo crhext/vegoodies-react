@@ -3,11 +3,11 @@ import './Header.css';
 import logo from './v-logo.svg';
 import Tilt from 'react-tilt'
 
-const Header = () => {
+const Header = ({ setNavState, navFilter, route }) => {
 	return (
 		<nav className="header container-pad">
 			<Tilt className="Tilt" options={{ max : 25 }}>
-				<div className="Tilt-inner header-inner br2 shadow-2">			
+				<div className="Tilt-inner header-inner br2 shadow-2" onClick={()=>setNavState('mains,desserts,lunches,snacks,breakfasts', 'index')}>			
 			          <p  title="">
 			            <img className="img-responsive logo" alt="" src={logo}></img>
 			            	<div className="header-brand">

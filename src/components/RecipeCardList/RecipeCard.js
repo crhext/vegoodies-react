@@ -1,15 +1,23 @@
 import React from "react";
 
-const RecipeCard = ({ image, title, overview }) => {
+class RecipeCard extends React.Component {
+	render() {
+
+
 	return (
-		<div className="col-xl-3 col-lg-4 col-md-6 recipe-card">
-			<img alt="title" src={image} />
+		<div 
+			onClick={()=>
+				this.props.onRecipeSelect(this.props.name,'recipe')}
+			className="col-xl-3 col-lg-4 col-md-6 recipe-card link-hover"
+		>
+			<img alt="title" src={this.props.image} />
 			<div>
-				<h2 className="recipe-card-header"> {title} </h2>
-				 <p> {overview} </p>{" "}
+				<h2 className="recipe-card-header"> {this.props.title} </h2>
+				 <p className="link-hover-child"> {this.props.overview} </p>{" "}
 			</div>
 		</div>
 	);
 };
+}
 
 export default RecipeCard;

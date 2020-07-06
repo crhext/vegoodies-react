@@ -5,32 +5,6 @@
  */
 
 
-@media screen and (max-width: 991px) {
-     /* start of large tablet styles */
-     .img-responsive {
-       max-width: 100%;
-       max-height: auto;
-     }
-}
-
-@media screen and (max-width: 767px) {
-     /* start of medium tablet styles */
-     /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
-     .img-responsive {
-       max-width: 100%;
-       max-height: auto;
-     }
-}
-
-@media screen and (max-width: 479px) {
-     /* start of phone styles */
-     /* It's possible to hide the image if the screen becomes too small */
-     .img-responsive {
-       max-width: 100%;
-       max-height: auto;
-     }
-}
-
 ul li { margin-bottom: 15px; }
 
 h1,h2,h3,h4,h5,h6 {
@@ -40,14 +14,23 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #ff4136;
+}
+
 .black-text {
   color: #000
 }
 
-body {
+html,body {
   font-family:Source Sans Pro,Helvetica,Arial,sans-serif;
   font-size:14px;
   line-height:1.3;
+  height:100%;
   }
 
 .theme-color {
@@ -192,11 +175,7 @@ body {
 .search-bar-pad {
   padding-bottom: 60px;
   width: 100%;
-  height: calc(1.5em + .75rem + 2px);;
-}
-
-.search-bar {
-  float: right;
+  height: 40px;
 }
 
 .form-control:focus{
@@ -230,6 +209,7 @@ body {
 
 .main-header {
   font-size: 4em;
+  margin-top:0px;
 
 }
 
@@ -264,4 +244,118 @@ body {
   font-size: 4em;
 }
 
+.search-logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 4px;
+  cursor: pointer;
+}
 
+
+.search-bar {
+  position: absolute;
+  right:35px;
+}
+
+.sticky {
+  position: sticky;
+}
+
+
+
+
+
+@media screen and (max-width: 991px) {
+     /* start of large tablet styles */
+     .img-responsive {
+       max-width: 100%;
+       max-height: auto;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     /* start of medium tablet styles */
+     /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+     .img-responsive {
+       max-width: 100%;
+       max-height: auto;
+     }
+}
+
+@media screen and (max-width: 599px) {
+     /* start of phone styles */
+     /* It's possible to hide the image if the screen becomes too small */
+     .img-responsive {
+       max-width: 100%;
+       max-height: auto;
+     }
+
+     .main {
+      margin-left: 0px; /* Same as the width of the sidebar */
+      width: auto;
+}
+
+ .nav-drawer {
+  background-color: white;
+  margin-top: 0px;
+  height: 100%;
+  position: fixed;
+  transition: 1s;
+  left: -200px;
+  width: 200px;
+  z-index: 99;
+ }
+
+ .nav-drawer-active {
+  background-color: white;
+  margin-top: 0px;
+  height: 100%;
+  position: fixed;
+  transition: 1s;
+  left: 0;
+  width: 200px;
+  z-index: 99;
+ }
+
+ .nav-drawer-inner {
+  margin-top: 55px;
+  z-index: 99;
+ }
+
+ .search {
+  z-index: 999;
+  position: relative;
+  margin-right: 0px;
+ }
+
+ .search-bar {
+  position: absolute;
+  right:15px;
+ }
+
+ .footer {
+  display:none;
+ }
+
+ .burger {
+  height: 38px;
+  width: 38px;
+}
+
+.fa-size {
+  font-size:2.5em;
+  margin-left: 4px;
+}
+
+}
+
+@media (min-width: 599px) { 
+  .search-logo {
+   display: none;
+ }
+
+}
+
+#scroll {
+
+}

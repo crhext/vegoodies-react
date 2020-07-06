@@ -1,6 +1,29 @@
 import React from 'react';
+import $ from 'jquery';
+import { findDOMNode } from 'react-dom';
 
-const AddRecipe = () => {
+class AddRecipe extends React.Component {
+ 	componentDidMount() {
+		 $("#ingredients").focus(function() {
+		    if(document.getElementById('ingredients').value === ''){
+		        document.getElementById('ingredients').value +='• ';
+		  }
+		});
+
+		$("#ingredients").keyup(function(event){
+		  var keycode = (event.keyCode ? event.keyCode : event.which);
+		    if(keycode == '13'){
+		        document.getElementById('ingredients').value +='• ';
+		  }
+		  var txtval = document.getElementById('ingredients').value;
+		  if(txtval.substr(txtval.length - 1) == '\n'){
+		    document.getElementById('ingredients').value = txtval.substring(0,txtval.length - 1);
+		  }
+		});
+ 	}
+
+
+	render() {
 	return (
 		<div class="row justify-content-left">
 		  <div class="col-xs-12 col-sm-8">
@@ -46,7 +69,7 @@ const AddRecipe = () => {
 
 		              <div class="form-group ingredients">
 		                <h4> Ingredients </h4>
-		                <textarea class="form-control" rows="5" id="ingredients" name="ingredients" required placeholder="Enter the ingredients"></textarea>
+		                <textarea class="form-control" rows="5" id="ingredients" ref="ingredients" name="ingredients" required placeholder="Enter the ingredients"></textarea>
 		              </div>
 
 		              <div class="form-group">
@@ -76,6 +99,27 @@ const AddRecipe = () => {
 		  </div>
 		</div>
 	);
-}
+};
+};
 
 export default AddRecipe;
+
+// 	handleBullet = () => {
+// 	const ingredients = findDOMNode(this.refs.ingredients)
+// 	$(ingredients).focus(function() {
+// 	    if(ingredients.value === ''){
+// 	        ingredients.value +='• ';
+// 	  }
+// 	});
+
+// 	$(ingredients).keyup(function(event){
+// 	  var keycode = (event.keyCode ? event.keyCode : event.which);
+// 	    if(keycode == '13'){
+// 	        ingredients.value +='• ';
+// 	  }
+// 	  var txtval = document.getElementById('ingredients').value;
+// 	  if(txtval.substr(txtval.length - 1) == '\n'){
+// 	    ingredients.value = txtval.substring(0,txtval.length - 1);
+// 	  }
+// 	});
+// }

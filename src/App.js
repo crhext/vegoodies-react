@@ -43,7 +43,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:5000/recipe")
+		fetch("https://vegoodies-api.herokuapp.com/recipe")
 			.then(response => {
 				return response.json();
 			})
@@ -57,7 +57,7 @@ class App extends Component {
 	};
 
 	toggleNavDrawerState = () => {
-		if (this.state.navDrawerActive == true) {
+		if (this.state.navDrawerActive === true) {
 			this.setState({navDrawerActive: false})
 		} else {
 			this.setState({navDrawerActive: true})
@@ -99,6 +99,11 @@ class App extends Component {
 		this.setState({ route: route})
 	}
 
+	onRecipeAdd = recipe => {
+		this.setState({ recipe: recipe})
+		this.setState({ route: 'recipe'})
+	}
+
 
 	renderSwitch(param) {
 
@@ -130,7 +135,7 @@ class App extends Component {
 			case "addRecipe": 
 				return (
 					<div>					
-						<AddRecipe />
+						<AddRecipe recipes={this.state.recipes} onRecipeAdd={this.onRecipeAdd} />
 					</div>					
 					);
 			default:
@@ -152,7 +157,7 @@ class App extends Component {
 				<Media query="(min-width: 599px)" render={() =>
 				(<Header setNavState={this.setNavState} navFilter={this.state.navFilter} route={this.state.route}/>)}
 				/>	        
-				<div className={this.state.navDrawerActive == true ? 'nav-drawer-active' : 'nav-drawer'}>
+				<div className={this.state.navDrawerActive === true ? 'nav-drawer-active' : 'nav-drawer'}>
 					<div className="nav-drawer-inner">
 						<Navigation  setNavState={this.setNavState} navFilter={this.state.navFilter} route={this.state.route}/>
 					</div>

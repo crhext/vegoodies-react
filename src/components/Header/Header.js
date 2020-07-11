@@ -8,12 +8,12 @@ const Header = ({ setNavState, navFilter, route }) => {
 		<nav className="header container-pad">
 			<Tilt className="Tilt" options={{ max : 25 }}>
 				<div className="Tilt-inner header-inner br2 shadow-2" onClick={()=>setNavState('mains,desserts,lunches,snacks,breakfasts', 'index')}>			
-			          <p  title="">
+			          <div  title="">
 			            <img className="img-responsive logo" alt="" src={logo}></img>
-			            	<div className="header-brand">
+			            	<p className="header-brand">
 			            	Vegoodies
-			            	</div>
-			          </p>
+			            	</p>
+			          </div>
 			        <p className="italic">Plant based recipes for every occasion; by Chris & Narnz.</p>
 				</div> 
 			</Tilt>

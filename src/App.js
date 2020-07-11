@@ -128,13 +128,13 @@ class App extends Component {
 					);
 			case "recipe": 
 				return (
-					<div>					
+					<div className="phone-pad" >					
 						<Recipe recipe={this.state.recipe}/>
 					</div>					
 					);
 			case "addRecipe": 
 				return (
-					<div>					
+					<div className="add-pad" >					
 						<AddRecipe recipes={this.state.recipes} onRecipeAdd={this.onRecipeAdd} />
 					</div>					
 					);
@@ -164,7 +164,7 @@ class App extends Component {
 					<Footer />
 				</div>
 			</div>
-			<div className="main container-pad" >
+			<div className="main container-pad container" >
 				<div className="">
 					<HeaderBar searchChange={this.onSearchChange} toggleNavDrawerState={this.toggleNavDrawerState} setHomeRoute={this.setHomeRoute} route={this.state.route} />
 				</div>

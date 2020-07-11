@@ -360,6 +360,16 @@ html,body {
   margin-left: 4px;
 }
 
+.recipe-pad {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.add-pad {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 }
 
 @media (min-width: 599px) { 

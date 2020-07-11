@@ -14,7 +14,7 @@ const Header = ({ setNavState, navFilter, route }) => {
 			            	Vegoodies
 			            	</p>
 			          </div>
-			        <p className="italic">Plant based recipes for every occasion; by Chris & Narnz.</p>
+			        <p className="italic">Plant based recipes for every occasion; by Chris, Narnz & Kathryn.</p>
 				</div> 
 			</Tilt>
 		</nav>

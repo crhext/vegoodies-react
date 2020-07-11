@@ -128,7 +128,7 @@ class App extends Component {
 					);
 			case "recipe": 
 				return (
-					<div className="phone-pad" >					
+					<div className="recipe-pad" >					
 						<Recipe recipe={this.state.recipe}/>
 					</div>					
 					);
